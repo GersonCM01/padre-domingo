@@ -92,16 +92,6 @@
     </div>
 
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const audio = document.getElementById("audio");
-            audio.play().catch((e) => {
-                console.log("Autoplay falló. Se necesita interacción del usuario.");
-            });
-        });
-    </script>
-    
-
-    <script>
         document.getElementById("yesBtn").addEventListener("click", function() {
             confetti({
                 particleCount: 200,
@@ -110,6 +100,7 @@
             });
             document.getElementById("message").style.display = "block";
             document.getElementById("image").style.display = "block";
+            document.getElementById("audio").play();
         });
 
         function redirectToVideo() {
